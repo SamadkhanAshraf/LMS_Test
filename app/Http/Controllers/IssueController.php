@@ -25,6 +25,7 @@ class IssueController extends Controller
     public function create()
     {
         //
+        return view('issue.create');
     }
 
     /**
