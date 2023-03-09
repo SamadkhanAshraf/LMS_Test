@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Issue;
 
 class IssueController extends Controller
 {
@@ -37,6 +38,9 @@ class IssueController extends Controller
     public function store(Request $request)
     {
         //
+        $issues = new Issue();
+        
+
     }
 
     /**

@@ -26,6 +26,11 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/plugins/style.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/plugins/datepicker-bs5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/images/favicon.ico') }}" type="image/x-icon">
+   
+
+
 
 
 
@@ -109,7 +114,8 @@
 
 <!-- custom-chart js -->
 <script src="{{ asset('dashboard_assets/assets/js/pages/dashboard-main.js') }}"></script>
-
-</body>
+<!-- <script src="{{ asset('dashboard_assets/assets/js/plugins/datepicker-full.min.js') }}"></script>
+<script src="{{ asset('dashboard_assets/assets/js/menu-setting.js') }}"></script>
+</body> -->
 
 </html>
