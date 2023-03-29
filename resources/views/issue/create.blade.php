@@ -45,13 +45,21 @@
 
                                                                 <label class="form-label" for="bname">Book name</label>
                                                                 <select class="form-select {{ $errors->has('bname')?'is-invalid':'' }}" id="" name="bname">
+                                                               
 
-                                                                    <option value="" selected>Select Book</option>
+                                                                
+                                                                   
                                                                   
-                                                                        <option value=""></option>
+                                                                    <option value="" selected>Select Book</option>
+                                                                    @forelse ($books as $book)
+                                                                        <option value="{{$book->id}}">{{$book->title}}</option>
+                                                                    @empty
+                                                                    @endforelse
+                                                                   
                                                                    
                                                                 <small>{{ $errors->first('bname') }}</small>
                                                                 </select>
+                                                               
                                                         </div>
                                                        
                                                         <!-- start picker -->
@@ -71,7 +79,10 @@
 
                                                                     <option value="" selected>Select Member</option>
                                                                   
-                                                                        <option value=""></option>
+                                                                    @forelse ($members as $member)
+                                                                        <option value="{{$member->id}}">{{$member->name}}</option>
+                                                                    @empty
+                                                                    @endforelse
                                                                    
                                                                 <small>{{ $errors->first('mname') }}</small>
                                                                 </select>
@@ -95,7 +106,10 @@
 
                                                                     <option value="" selected>Select Precidency</option>
                                                                   
-                                                                        <option value=""></option>
+                                                                         @forelse ($precidencies as $precidency)
+                                                                        <option value="{{$precidency->id}}">{{$precidency->name}}</option>
+                                                                    @empty
+                                                                    @endforelse
                                                                    
                                                                 <small>{{ $errors->first('pname') }}</small>
                                                                 </select>
@@ -118,7 +132,10 @@
 
                                                                     <option value="" selected>Select department</option>
                                                                   
-                                                                        <option value=""></option>
+                                                                    @forelse ($departments as $department)
+                                                                        <option value="{{$department->id}}">{{$department->name}}</option>
+                                                                    @empty
+                                                                    @endforelse
                                                                    
                                                                 <small>{{ $errors->first('dname') }}</small>
                                                                 </select>

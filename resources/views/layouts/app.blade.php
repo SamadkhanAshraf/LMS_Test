@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/plugins/datepicker-bs5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/images/favicon.ico') }}" type="image/x-icon">
+
+
    
 
 
@@ -117,5 +119,25 @@
 <!-- <script src="{{ asset('dashboard_assets/assets/js/plugins/datepicker-full.min.js') }}"></script>
 <script src="{{ asset('dashboard_assets/assets/js/menu-setting.js') }}"></script>
 </body> -->
+<script src="../assets/js/plugins/popper.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/pcoded.js"></script>
+
+<script>
+    var datatable = new simpleDatatables.DataTable('#pc-dt-satetime-sorting', {
+        columns: [{
+                select: 2,
+                type: "date",
+                format: "RFC_2822"
+            },
+            {
+                select: 3,
+                type: "date",
+                format: "MMM DD, YYYY"
+            }
+        ]
+    });
+</script>
 
 </html>
