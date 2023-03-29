@@ -74,7 +74,7 @@
                     <li class="nav-item pcoded-hasmenu">
                         <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">User</span></a>
                         <ul class="pcoded-submenu" style="box-sizing: border-box; display: block; transition-property: height, margin, padding; transition-duration: 200ms; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
-                            <li><a href="../navigation/user-profile.html">Profile</a></li>
+                            <li><a href="{{route('')}}">Setting</a></li>
                             <li><a href="../navigation/user-card.html">User Card</a></li>
                             <li><a href="../navigation/user-list.html">User List</a></li>
                         </ul>
