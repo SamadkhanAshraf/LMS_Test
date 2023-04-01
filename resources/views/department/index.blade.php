@@ -64,11 +64,11 @@
                                             <td>{{ $item->name }}</td>
                                             <td>{{$item->description}}</td>
                                             <td>{{$item->directrate->name??'not set'}}</td>
-                                            <td><a href="{{route('department.edit',$item->id)}}" class="btn btn-secondary btn-sm">Edit</a></td>
+                                            <td><a href="{{route('department.edit',$item->id)}}" class="btn btn-secondary btn-sm">{{__('nav.edit')}}</a></td>
                                            <td> <form method="post" action="{{route('department.destroy',$item->id)}}">
                                                 @method('delete')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">{{__('nav.delete')}}</button>
                                             </form>
                                         </td>
                                         </tr>

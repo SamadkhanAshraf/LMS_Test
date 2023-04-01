@@ -127,8 +127,8 @@
 
 
 
-                                                <button type="submit" class="btn  btn-primary fa fa-plus-circle"></button>
-                                                <a href="{{route('member.index')}}" class="btn  btn-primary fa fa-arrow-left"> Back</a>
+                                                <button type="submit" class="btn  btn-primary">{{__('nav.save')}}</button>
+                                                <a href="{{route('member.index')}}" class="btn  btn-primary fa fa-arrow-left"> {{__('nav.back')}}</a>
                                                 </form>
                                         </div>
                                         <div class="col-md-6">

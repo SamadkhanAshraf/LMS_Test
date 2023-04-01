@@ -7,7 +7,7 @@
                         <label>Navigation</label>
                     </li>
                     <li class="nav-item pcoded-hasmenu active">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">Books</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.books')}}</span></a>
                         <ul class="pcoded-submenu" style="display: block; transition-property: height, margin, padding; transition-duration: 200ms; box-sizing: border-box; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
                             <li class=""><a href="{{ route('book.create') }}">Add Book</a></li>
                             {{-- <li><a href="{{ route('book.index') }}">View Books</a></li> --}}
@@ -17,7 +17,7 @@
                     </li>
                    {{-- Members start --}}
                 <li class="nav-item pcoded-hasmenu">
-                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Members</span><span class="pcoded-badge badge bg-success">100+</span></a>
+                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.members')}}</span><span class="pcoded-badge badge bg-success">100+</span></a>
                     <ul class="pcoded-submenu" style="display: none;">
                         <li><a href="{{ route('member.create') }}">add memeber</a></li>
                      <li><a href="{{route('member.index')}}">view member</a></li>
@@ -26,7 +26,7 @@
                 </li>
                    {{-- Members ends --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">Category</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">{{__('nav.category')}}</span></a>
                         <ul class="pcoded-submenu" style="display: none;">
                             <li><a href="{{ route('category.create') }}">Add Category</a></li>
                            {{-- <li><a href="{{route('department.create')}}">Department</a></li>--}}
@@ -35,7 +35,7 @@
                     </li>
                     {{-- precidency --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">Precidency</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.precidency')}}</span></a>
                         <ul class="pcoded-submenu" style="display: block; transition-property: height, margin, padding; transition-duration: 200ms; box-sizing: border-box; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
                             <li class=""><a href="{{route('precidency.create')}}">Add Precidency</a></li>
                             <li><a href="{{route('precidency.index')}}">View Precidency</a></li>
@@ -44,7 +44,7 @@
                     </li>
                     {{-- Department --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">Department</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.department')}}</span></a>
                         <ul class="pcoded-submenu" style="display: block; transition-property: height, margin, padding; transition-duration: 200ms; box-sizing: border-box; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
                             <li class=""><a href="{{route('department.create')}}">Add Department</a></li>
                             <li><a href="{{route('department.index')}}">View Department</a></li>
@@ -53,7 +53,7 @@
                     </li>
                     {{-- issues start --}}
                 <li class="nav-item pcoded-hasmenu">
-                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Issues</span><span class="pcoded-badge badge bg-success">100+</span></a>
+                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.issues')}}</span><span class="pcoded-badge badge bg-success">100+</span></a>
                     <ul class="pcoded-submenu" style="display: none;">
                         <li><a href="{{ route('issue.create') }}">Issue book</a></li>
                      <li><a href="{{route('issue.index')}}">All issues</a></li>
@@ -72,9 +72,9 @@
                         {{-- </ul> --}}
                     {{-- </li> --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">User</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.user')}}</span></a>
                         <ul class="pcoded-submenu" style="box-sizing: border-box; display: block; transition-property: height, margin, padding; transition-duration: 200ms; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
-                            <li><a href="{{route('')}}">Setting</a></li>
+                            <li><a href="{{route('setting.index')}}">Setting</a></li>
                             <li><a href="../navigation/user-card.html">User Card</a></li>
                             <li><a href="../navigation/user-list.html">User List</a></li>
                         </ul>

@@ -4,8 +4,8 @@
     <div class="m-header">
         <a class="mobile-menu" id="mobile-collapse" href="#"><span></span></a>
         <a href="#" class="b-brand">
-            <h4>LIBRARY</h4>
-            <small>MIS</small>
+            <h4>{{__('nav.Library')}}</h4>
+            <small>{{__('nav.MIS')}}</small>
             <!-- ========   change your logo hear   ============ -->
             <img src="{{ asset('dashboard_assets/assets/images/logo2.png')}}" alt="" class="logo" width="80px" height="60px">
             <img src="{{ asset('dashboard_assets/assets/images/library.png')}}" alt="" class="logo-thumb">
@@ -28,7 +28,17 @@
                 <a href="#" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a>
             </li>
         </ul>
+        
         <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle " role="navigation" data-bs-toggle="dropdown"><span class="fa fa-globe"> {{__('nav.language')}} </span></a>
+
+                <div class="dropdown-menu">
+                    <a href="{{route('locale',['locale'=>'en'])}}" class="dropdown-item">English</a>
+                    <a href="{{route('locale',['locale'=>'dr'])}}" class="dropdown-item">دری</a>
+                </div>
+            </li>
+       
             <li>
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="icon feather icon-bell"></i><span class="badge bg-danger"><span class="sr-only"></span></span></a>

@@ -80,12 +80,12 @@
                                                 @method('delete')
                                                 @csrf
                                                 
-                                                <button type="submit" class="btn btn-xs btn-danger btn-sm fa fa-trash" onclick="return confirm('Are you sure')"></button>
+                                                <button type="submit" class="btn btn-xs btn-danger btn-sm" onclick="return confirm('Are you sure')">{{__('nav.delete')}}</button>
                                             </form>
                                             </td>
                                            </tr>
                                         @endforeach
-                                        <a href="{{route('member.create')}}" class="btn btn-primary">Back</a>
+                                        <a href="{{route('member.create')}}" class="btn btn-primary">{{__('nav.back')}}</a>
                                     </tbody>
                                 </table>
                             </div>

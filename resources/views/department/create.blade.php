@@ -82,7 +82,7 @@
                                                             </select>
                                                     </div>
                                                     </div>
-                                                <button type="submit" class="btn  btn-primary">Add Department</button>
+                                                <button type="submit" class="btn  btn-primary">{{__('nav.save')}}</button>
                                                 </form>
                                         </div>
                                         <div class="col-md-6">

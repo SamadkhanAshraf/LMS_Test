@@ -125,8 +125,8 @@
 
 
 
-                                                <button type="submit" class="btn  btn-primary">Add member</button>
-                                                <a href="{{route('member.index')}}" class="btn  btn-primary">Back</a>
+                                                <button type="submit" class="btn  btn-primary">{{__('nav.save')}}</button>
+                                                <a href="{{route('member.index')}}" class="btn  btn-primary">{{__('nav.back')}}</a>
                                                 </form>
                                         </div>
                                         <div class="col-md-6">

@@ -70,7 +70,7 @@
                                                             <small class="text-danger">{{ $errors->first('description'); }}</small>
                                                         </div>
                                                     </div>
-                                                <button type="submit" class="btn  btn-primary">Add precidency</button>
+                                                <button type="submit" class="btn  btn-primary">{{__('nav.save')}}</button>
                                                 </form>
                                         </div>
                                         <div class="col-md-6">

@@ -53,7 +53,7 @@
                                                             <small class="text-danger">{{ $errors->first('description'); }}</small>
                                                         </div>
                                                     </div>
-                                                <button type="submit" class="btn  btn-primary">Update</button>
+                                                <button type="submit" class="btn  btn-primary">{{__('nav.edit')}}</button>
                                                 </form>
                                         </div>
                                         <div class="col-md-6">

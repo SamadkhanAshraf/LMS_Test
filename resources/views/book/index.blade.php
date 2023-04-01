@@ -70,12 +70,12 @@
                                             <td>{{$book->category->name??'not set'}}</td>
                                             <td>{{$book->section}}</td>
                                             <td>{{$book->quantity}}</td>
-                                            <td><a href="{{route('book.edit',$book->id)}}" class="fa fa-edit"></a></td>
+                                            <td><a href="{{route('book.edit',$book->id)}}" class="">{{__('nav.edit')}}</a></td>
                                            <td> <form method="post" action="{{route('book.destroy',$book->id)}}">
                                                 @method('delete')
                                                 @csrf
                                                 <input name="_method" type="hidden" value="DELETE">
-                                                 <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" onclick="<script>document.window('do you want to delete.');</script>" title='Delete'>Delete</button>
+                                                 <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" onclick="<script>document.window('do you want to delete.');</script>" title='Delete'>{{__('nav.delete')}}</button>
                                             </td>
                                            </tr>
                                         @endforeach

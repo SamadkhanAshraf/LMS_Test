@@ -8,6 +8,7 @@ use App\Http\Controllers\PrecidencyController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\IssueController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\SettingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,8 +39,13 @@ Route::resource('precidency',PrecidencyController::class);
 Route::resource('department',DepartmentController::class);
 Route::resource('issue',IssueController::class);
 Route::resource('member',MemberController::class);
+Route::resource('setting',SettingController::class);
 
-
+Route::get('/locale/{locale}',function($locale){
+    app()->setlocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+})->name('locale');
 
 
 

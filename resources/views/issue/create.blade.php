@@ -157,8 +157,8 @@
                                                         <!-- end select -->
                                             </div>
 
-                                            <button type="submit" class="btn  btn-primary">add issue</button>
-                                            <a href="{{route('issue.index')}}" class="btn  btn-primary">Back</a>
+                                            <button type="submit" class="btn  btn-primary">{{__('nav.save')}}</button>
+                                            <a href="{{route('issue.index')}}" class="btn  btn-primary">{{__('nav.back')}}</a>
 
                                                 </form>
                                         </div>
