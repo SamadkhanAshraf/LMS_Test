@@ -19,7 +19,7 @@ class CreateReturnBooksTable extends Migration
             $table->integer('book_id');
             $table->integer('category_id');
             $table->date('recieve_date');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->timestamps();
         });
     }

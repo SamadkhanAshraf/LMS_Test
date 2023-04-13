@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Book;
+use App\Models\Member;
+use App\Models\Issue;
 use Illuminate\Http\Request;
 
 class ReturnBookController extends Controller
@@ -14,6 +16,9 @@ class ReturnBookController extends Controller
     public function index()
     {
         //
+
+        $books = Book::all();
+        return view('return.index')->with('books',$books);
     }
 
     /**
@@ -24,6 +29,13 @@ class ReturnBookController extends Controller
     public function create()
     {
         //
+        $books = Book::all();
+        $members = Member::all();
+        $issues = Issue::all();
+        return view('return.create')
+                        ->with('books',$books)
+                        ->with('members',$members)
+                        ->with('issues',$issues);
     }
 
     /**

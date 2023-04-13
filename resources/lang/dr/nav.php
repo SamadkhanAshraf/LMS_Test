@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'Library' =>'دلایبرری',
+    'Library' =>'کتابخانه',
     'MIS'=>'سیستم',
     'language'=>'زبان',
     'books'=>'کتاب ها',
@@ -16,6 +16,7 @@ return [
     'delete'=>'حذف',
     'back'=>'عقب',
     'cancel'=>'لغوه',
+    'retrun_book'=>'کتابهای اورده شده',
 
 ]
 

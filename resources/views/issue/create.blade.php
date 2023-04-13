@@ -22,10 +22,10 @@
                                 <!-- </div>
                             </div>
                         </div>
-                    </div> --> 
+                    </div> -->
                     <!-- [ breadcrumb ] end -->
                     <!-- [ Main Content ] start -->
-                    <div class="row">
+                    <div class="row" onload="issueDate()">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
@@ -37,7 +37,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
 
-                                                <form action="{{ route('issue.store') }}" method="post">
+                                                <form action="{{ route('issue.store') }}" method="post" >
                                                     @method('post')
                                                     @csrf
                                                     <div class="row">
@@ -45,27 +45,27 @@
 
                                                                 <label class="form-label" for="bname">Book name</label>
                                                                 <select class="form-select {{ $errors->has('bname')?'is-invalid':'' }}" id="" name="bname">
-                                                               
 
-                                                                
-                                                                   
-                                                                  
+
+
+
+
                                                                     <option value="" selected>Select Book</option>
                                                                     @forelse ($books as $book)
                                                                         <option value="{{$book->id}}">{{$book->title}}</option>
                                                                     @empty
                                                                     @endforelse
-                                                                   
-                                                                   
+
+
                                                                 <small>{{ $errors->first('bname') }}</small>
                                                                 </select>
-                                                               
+
                                                         </div>
-                                                       
+
                                                         <!-- start picker -->
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label">Issue Date</label>
-                                                            <input type="date" class="form-control {{ $errors->has('idate')?'is-invalid':'' }}" placeholder="" name="idate">
+                                                            <input type="date" class="form-control {{ $errors->has('idate')?'is-invalid':'' }}" placeholder="" name="idate" id="issueDate" onload="issueDate()">
                                                             <small class="text-danger">{{ $errors->first('idate'); }}</small>
                                                         </div>
                                                         <!-- end picker -->
@@ -78,12 +78,12 @@
                                                                 <select class="form-select {{ $errors->has('mname')?'is-invalid':'' }}" id="mname" name="mname">
 
                                                                     <option value="" selected>Select Member</option>
-                                                                  
+
                                                                     @forelse ($members as $member)
                                                                         <option value="{{$member->id}}">{{$member->name}}</option>
                                                                     @empty
                                                                     @endforelse
-                                                                   
+
                                                                 <small>{{ $errors->first('mname') }}</small>
                                                                 </select>
                                                         </div>
@@ -105,12 +105,12 @@
                                                                 <select class="form-select {{ $errors->has('pname')?'is-invalid':'' }}" id=" " name="pname">
 
                                                                     <option value="" selected>Select Precidency</option>
-                                                                  
+
                                                                          @forelse ($precidencies as $precidency)
                                                                         <option value="{{$precidency->id}}">{{$precidency->name}}</option>
                                                                     @empty
                                                                     @endforelse
-                                                                   
+
                                                                 <small>{{ $errors->first('pname') }}</small>
                                                                 </select>
                                                         </div>
@@ -131,12 +131,12 @@
                                                                 <select class="form-select {{ $errors->has('dname')?'is-invalid':'' }}" id="" name="dname">
 
                                                                     <option value="" selected>Select department</option>
-                                                                  
+
                                                                     @forelse ($departments as $department)
                                                                         <option value="{{$department->id}}">{{$department->name}}</option>
                                                                     @empty
                                                                     @endforelse
-                                                                   
+
                                                                 <small>{{ $errors->first('dname') }}</small>
                                                                 </select>
                                                         </div>
@@ -148,9 +148,9 @@
                                                                 <select class="form-select {{ $errors->has('Author')?'is-invalid':'' }}" id="b_category" name="category">
 
                                                                     <option value="" selected>Select category</option>
-                                                                  
+
                                                                         <option value=""></option>
-                                                                   
+
                                                                 <small>{{ $errors->first('category') }}</small>
                                                                 </select>
                                                         </div> -->
@@ -166,7 +166,6 @@
 
                                         </div>
                                     </div>
-
                                     <script>
                                         // Example starter JavaScript for disabling form submissions if there are invalid fields
                                         (function () {
@@ -250,7 +249,5 @@
         <!-- Warning Section Ends -->
 
         <!-- Required Js -->
-
-
-
+        <script src="{{asset('dashboard_assets/myjs/curdate.js')}}"></script>
 @endsection

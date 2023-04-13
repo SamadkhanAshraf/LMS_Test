@@ -9,6 +9,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\IssueController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ReturnBookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,7 @@ Auth::routes();
 
 
 Route::get('/', function () {
+
     return view('dashboard');
 });
 // Route::get('/', function () {
@@ -40,6 +42,7 @@ Route::resource('department',DepartmentController::class);
 Route::resource('issue',IssueController::class);
 Route::resource('member',MemberController::class);
 Route::resource('setting',SettingController::class);
+Route::resource('return_book',ReturnBookController::class);
 
 Route::get('/locale/{locale}',function($locale){
     app()->setlocale($locale);

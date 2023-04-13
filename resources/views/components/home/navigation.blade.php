@@ -7,7 +7,7 @@
                         <label>Navigation</label>
                     </li>
                     <li class="nav-item pcoded-hasmenu active">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.books')}}</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.books')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\Book::all())}}</span></a>
                         <ul class="pcoded-submenu" style="display: block; transition-property: height, margin, padding; transition-duration: 200ms; box-sizing: border-box; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
                             <li class=""><a href="{{ route('book.create') }}">Add Book</a></li>
                             {{-- <li><a href="{{ route('book.index') }}">View Books</a></li> --}}
@@ -17,16 +17,16 @@
                     </li>
                    {{-- Members start --}}
                 <li class="nav-item pcoded-hasmenu">
-                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.members')}}</span><span class="pcoded-badge badge bg-success">100+</span></a>
+                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.members')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\Member::all())}}</span></a>
                     <ul class="pcoded-submenu" style="display: none;">
                         <li><a href="{{ route('member.create') }}">add memeber</a></li>
                      <li><a href="{{route('member.index')}}">view member</a></li>
-                        
+
                     </ul>
                 </li>
                    {{-- Members ends --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">{{__('nav.category')}}</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">{{__('nav.category')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\Category::all())}}</span></a>
                         <ul class="pcoded-submenu" style="display: none;">
                             <li><a href="{{ route('category.create') }}">Add Category</a></li>
                            {{-- <li><a href="{{route('department.create')}}">Department</a></li>--}}
@@ -35,7 +35,7 @@
                     </li>
                     {{-- precidency --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.precidency')}}</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.precidency')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\Precidency::all())}}</span></a>
                         <ul class="pcoded-submenu" style="display: block; transition-property: height, margin, padding; transition-duration: 200ms; box-sizing: border-box; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
                             <li class=""><a href="{{route('precidency.create')}}">Add Precidency</a></li>
                             <li><a href="{{route('precidency.index')}}">View Precidency</a></li>
@@ -44,7 +44,7 @@
                     </li>
                     {{-- Department --}}
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.department')}}</span></a>
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">{{__('nav.department')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\Department::all())}}</span></a>
                         <ul class="pcoded-submenu" style="display: block; transition-property: height, margin, padding; transition-duration: 200ms; box-sizing: border-box; height: 0px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
                             <li class=""><a href="{{route('department.create')}}">Add Department</a></li>
                             <li><a href="{{route('department.index')}}">View Department</a></li>
@@ -52,14 +52,25 @@
                         </ul>
                     </li>
                     {{-- issues start --}}
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.issues')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\Issue::all())}}</span></a>
+                        <ul class="pcoded-submenu" style="display: none;">
+                            <li><a href="{{ route('issue.create') }}">Issue book</a></li>
+                         <li><a href="{{route('issue.index')}}">All issues</a></li>
+                         <li><a href="{{route('issue.index')}}">Return Book</a></li>
+
+
+                        </ul>
+                    </li>
+                    {{-- issues start --}}
                 <li class="nav-item pcoded-hasmenu">
-                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.issues')}}</span><span class="pcoded-badge badge bg-success">100+</span></a>
+                    <a href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">{{__('nav.retrun_book')}}</span><span class="pcoded-badge badge bg-success">{{count(\App\Models\ReturnBook::all())}}</span></a>
                     <ul class="pcoded-submenu" style="display: none;">
-                        <li><a href="{{ route('issue.create') }}">Issue book</a></li>
-                     <li><a href="{{route('issue.index')}}">All issues</a></li>
-                     <li><a href="{{route('issue.index')}}">Return Book</a></li>
-                     
-                        
+                        <li><a href="{{ route('return_book.create') }}">Return Book</a></li>
+                     <li><a href="{{route('issue.index')}}">All Retrun Book</a></li>
+                     {{-- <li><a href="{{route('issue.index')}}">Return Book</a></li> --}}
+
+
                     </ul>
                 </li>
                    {{-- Issuees ends --}}

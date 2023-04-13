@@ -16,7 +16,7 @@ return [
     'delete'=>'Delete',
     'back'=>'Back',
     'cancel'=>'Cancel',
-    'delete'=>'',
+    'retrun_book'=>'Return Book',
 
 
 ]

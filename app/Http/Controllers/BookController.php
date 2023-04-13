@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Category;
@@ -19,6 +18,7 @@ class BookController extends Controller
     {
         //return a view to add new book.
         $books = Book::all();
+        // return view('book.index',compact('books'));
         return view('book.index',compact('books'));
 
     }

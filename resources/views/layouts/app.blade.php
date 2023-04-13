@@ -11,7 +11,7 @@
     	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     	<![endif]-->
     <!-- Meta -->
-   
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -30,14 +30,14 @@
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/images/favicon.ico') }}" type="image/x-icon">
 
 
-   
+
 
 
 
 
 
 </head>
-<body class="">
+<body class="" onload="return issueDate()">
 	<!-- [ Pre-loader ] start -->
     <x-home.navigation/>
 	<!-- [ navigation menu ] end -->
@@ -123,6 +123,11 @@
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/plugins/bootstrap.min.js"></script>
     <script src="../assets/js/pcoded.js"></script>
+    <script>
+
+      
+
+        </script>
 
 <script>
     var datatable = new simpleDatatables.DataTable('#pc-dt-satetime-sorting', {
