@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Member;
 use App\Models\Issue;
+use App\Models\Precidency;
 use Illuminate\Http\Request;
 
 class ReturnBookController extends Controller
@@ -92,5 +93,37 @@ class ReturnBookController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+
+    public function getBooks($id){
+        $issues = Issue::where('member_id',$id)->get();
+        $books= array();
+
+        if($issues->isNotEmpty()){
+            foreach ($issues as $key => $issueBook) {
+                array_push($books,Book::where('id',$issueBook->book_id)->get()->first());
+            }
+            return response()->json(['books'=>$books,'status'=>200]);
+        }
+        else{
+            return response()->json(['msg'=>'record not found','status'=>200]);
+        }
+    }
+    public function getPrecidency($id){
+        $issues = Issue::where('member_id',$id)->get();
+        $precidency= array();
+
+        if($issues->isNotEmpty()){
+            foreach ($issues as $key => $issueBook) {
+                array_push($precidency,Precidency::where('id',$issueBook->precidency_id)->get()->first());
+            }
+            return response()->json(['precidency'=>$precidency,'status'=>200]);
+        }
+        else{
+            return response()->json(['msg'=>'record not found','status'=>200]);
+        }
     }
 }

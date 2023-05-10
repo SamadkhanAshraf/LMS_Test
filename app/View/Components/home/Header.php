@@ -11,9 +11,11 @@ class Header extends Component
      *
      * @return void
      */
+    public $logId;
     public function __construct()
     {
-        //
+        // $this->logId= \App\Models\User::
+    
     }
 
     /**

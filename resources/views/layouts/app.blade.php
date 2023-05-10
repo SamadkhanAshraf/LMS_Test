@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/css/plugins/datepicker-bs5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_assets/assets/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset(' dashboard_assets/assets/images/user/avatar-4.jpg') }}" type="image/x-icon">
 
 
 
@@ -37,7 +38,7 @@
 
 
 </head>
-<body class="" onload="return issueDate()">
+<body class="">
 	<!-- [ Pre-loader ] start -->
     <x-home.navigation/>
 	<!-- [ navigation menu ] end -->
@@ -46,12 +47,12 @@
 	<!-- [ chat message ] end -->
 
 <!-- [ Main Content ] start -->
-<div class="pcoded-main-container">
-    <div class="pcoded-wrapper">
-            @section('contents')
-            @show
-    </div>
-</div>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                        @section('contents')
+                        @show
+                </div>
+            </div>
 <!-- [ Main Content ] end -->
     <!-- Warning Section start -->
     <!-- Older IE warning message -->
@@ -107,27 +108,23 @@
     <script src="{{asset('dashboard_assets/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
     <script src="{{asset('dashboard_assets/assets/js/plugins/bootstrap.min.js') }}"></script>
     <script src="{{asset('dashboard_assets/assets/js/pcoded.js') }}"></script>
-    <script src="{{asset('dashboard_assets/assets/js/plugins/simple-datatables.js') }}"></script>
+    {{-- <script src="{{asset('dashboard_assets/assets/js/plugins/simple-datatables.js') }}"></script> --}}
 
 
 <!-- Apex Chart -->
-<script src="{{ asset('dashboard_assets/assets/js/plugins/apexcharts.min.js') }}"></script>
-<script src="{{ asset('dashboard_assets/assets/js/menu-setting.js') }}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/plugins/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/menu-setting.js') }}"></script>
 
 <!-- custom-chart js -->
-<script src="{{ asset('dashboard_assets/assets/js/pages/dashboard-main.js') }}"></script>
-<!-- <script src="{{ asset('dashboard_assets/assets/js/plugins/datepicker-full.min.js') }}"></script>
-<script src="{{ asset('dashboard_assets/assets/js/menu-setting.js') }}"></script>
-</body> -->
-<script src="../assets/js/plugins/popper.min.js"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/plugins/bootstrap.min.js"></script>
-    <script src="../assets/js/pcoded.js"></script>
-    <script>
+    <script src="{{ asset('dashboard_assets/assets/js/pages/dashboard-main.js') }}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/plugins/datepicker-full.min.js') }}">
+    <script src="{{ asset('dashboard_assets/assets/js/menu-setting.js') }}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/plugins/popper.min.js')}}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/plugins/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('dashboard_assets/assets/js/pcoded.js')}}"></script>
 
-      
-
-        </script>
+</body>
 
 <script>
     var datatable = new simpleDatatables.DataTable('#pc-dt-satetime-sorting', {
@@ -144,5 +141,8 @@
         ]
     });
 </script>
+
+@section('script')
+@show
 
 </html>

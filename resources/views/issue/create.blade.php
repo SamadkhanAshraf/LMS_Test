@@ -25,7 +25,7 @@
                     </div> -->
                     <!-- [ breadcrumb ] end -->
                     <!-- [ Main Content ] start -->
-                    <div class="row" onload="issueDate()">
+                    <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
@@ -65,7 +65,7 @@
                                                         <!-- start picker -->
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label">Issue Date</label>
-                                                            <input type="date" class="form-control {{ $errors->has('idate')?'is-invalid':'' }}" placeholder="" name="idate" id="issueDate" onload="issueDate()">
+                                                            <input type="date" class="form-control {{ $errors->has('idate')?'is-invalid':'' }}"  name="idate" id="issueDate" onfocus="issueDate()">
                                                             <small class="text-danger">{{ $errors->first('idate'); }}</small>
                                                         </div>
                                                         <!-- end picker -->
@@ -158,7 +158,8 @@
                                             </div>
 
                                             <button type="submit" class="btn  btn-primary">{{__('nav.save')}}</button>
-                                            <a href="{{route('issue.index')}}" class="btn  btn-primary">{{__('nav.back')}}</a>
+                                            {{-- <a href="{{route('issue.index')}}" class="btn  btn-primary">{{__('nav.back')}}</a> --}}
+                                            <input type="button" class="btn  btn-primary" onclick="issueDate()" value="alert">
 
                                                 </form>
                                         </div>
@@ -247,7 +248,14 @@
             </div>
         <![endif]-->
         <!-- Warning Section Ends -->
-
+     <script>
+    function issueDate()
+        {
+        var d = new Date();
+        curdate=d.getFullYear() + "/" + (d.getMonth() +1) + "/" + d.getDate();
+            document.getElementById('issueDate').value=curdate;
+        }
+    </script>
         <!-- Required Js -->
-        <script src="{{asset('dashboard_assets/myjs/curdate.js')}}"></script>
+        {{-- <script src="{{asset('dashboard_assets/myjs/curdate.js')}}"></script> --}}
 @endsection

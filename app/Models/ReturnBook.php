@@ -17,14 +17,14 @@ class ReturnBook extends Model
     ];
 
 
-    public function member()
-    {
-        return $this->belongsTo(Member::class,'member_id');
-    }
+    // public function member()
+    // {
+    //     return $this->belongsToMany(Member::class,'member_id');
+    // }
 
-    public function book()
-    {
-        return $this->belongsTo(Book::class,'book_id');
-    }
+    // public function book()
+    // {
+    //     return $this->belongsTo(Book::class,'book_id');
+    // }
 }
 

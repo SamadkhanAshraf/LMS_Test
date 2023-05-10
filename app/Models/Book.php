@@ -25,6 +25,9 @@ class Book extends Model
         //     return $this->hasOne(Category::class, 'category_id', 'id');
         // }
 
+    public function returnBook(){
+        return $this->belongsToMany(Member::class,'return_books','member_id','id');
+    }
 
 }
 

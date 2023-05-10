@@ -25,6 +25,7 @@
                 </div>
             </li>
             <li class="nav-item">
+
                 <a href="#" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a>
             </li>
         </ul>
@@ -45,7 +46,8 @@
                     <a href="#" class="displayChatbox dropdown-toggle"><i class="icon feather icon-mail"></i><span class="badge bg-success"><span class="sr-only"></span></span></a>
                 </div>
             </li>
-            <li>
+
+            {{-- <li>
                 <div class="dropdown drp-user">
                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
                         <img src="{{ asset('dashboard_assets/assets/images/user/avatar-2.jpg')}}" class="img-radius wid-40" alt="User-Profile-Image">
@@ -64,6 +66,20 @@
                             <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
                         </ul>
                     </div>
+                </div>
+            </li> --}}
+            <li>
+                @if (Session::has('logId'))
+                    @php
+                        $user = Session::get('logId');
+                    @endphp
+                    <div class=""><span>Welcome, </span>{{$user->name , ' '}}<span style=""><a href="{{route('logout.user')}}"> | Logout</a></span></div>
+                 @endif
+                @if (!Session::has('logId'))
+                    <div class=""><span class="text-danger">Welcome, guest</span></div>
+                 @endif
+                <div class="dropdown">
+                    {{-- <a href="#" class="displayChatbox dropdown-toggle"><i class="icon feather icon-mail"></i><span class="badge bg-success"><span class="sr-only"></span></span></a> --}}
                 </div>
             </li>
         </ul>
